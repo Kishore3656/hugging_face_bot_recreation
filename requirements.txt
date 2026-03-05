@@ -1,0 +1,25 @@
+# Core data & math
+pandas
+numpy
+
+
+# Market data (free!)
+yfinance
+ccxt
+
+# Technical indicators
+ta
+# pandas-ta
+
+# Reinforcement Learning
+gymnasium
+stable-baselines3
+
+# Visualization
+plotly
+matplotlib
+
+# Utilities
+python-dotenv
+pyyaml
+loguru

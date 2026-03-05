@@ -1,0 +1,45 @@
+ai:
+  algorithm: PPO
+  learning_rate: 0.0003
+  model_save_path: models/
+  training_timesteps: 100000
+broker:
+  initial_capital: 10000
+  mode: paper
+data:
+  assets:
+    crypto:
+    - BTC-USD
+    - ETH-USD
+    forex:
+    - EURUSD=X
+    - GBPUSD=X
+    stocks:
+    - AAPL
+    - MSFT
+    - GOOGL
+  lookback_days: 365
+  timeframe: 1d
+  train_split: 0.8
+indicators:
+  atr_period: 14
+  bollinger:
+    period: 20
+    std_dev: 2
+  ema_periods:
+  - 20
+  - 50
+  - 200
+  macd:
+    fast: 12
+    signal: 9
+    slow: 26
+  rsi_periods:
+  - 7
+  - 14
+risk:
+  max_daily_loss: 0.03
+  max_drawdown: 0.2
+  max_positions: 5
+  position_size_pct: 0.02
+  stop_loss_atr_multiple: 1.5
