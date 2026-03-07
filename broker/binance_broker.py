@@ -1,13 +1,20 @@
 # broker/binance_broker.py
 
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 from binance.client import Client
 from binance.exceptions import BinanceAPIException
 from loguru import logger
 
-load_dotenv()
+# Force find .env from project root
+env_path = Path(__file__).parent.parent / ".env"
+load_dotenv(env_path)
 
+# DEBUG — shows if keys are loading
+print(f"🔍 Looking for .env at: {env_path}")
+print(f"🔍 .env exists: {env_path.exists()}")
+print(f"🔍 API KEY found: {bool(os.getenv('BINANCE_API_KEY'))}")
 
 class BinanceBroker:
     """
